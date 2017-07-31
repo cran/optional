@@ -1,0 +1,14 @@
+422b90be13e6fcb4423fb234d884e2c0 *DESCRIPTION
+179ae0d07bf08a725a0488cff5e5a83b *NAMESPACE
+4543b7f614fa6e157d6edee7cf37fb54 *R/optional.R
+f950cc3c0d62eeca4caa35031b65d1ac *build/vignette.rds
+0cf2c08b557312fd0862c7684cb15f59 *inst/doc/UserGuide.R
+ef04cb49e1fe4225ce39c5bdc14ce521 *inst/doc/UserGuide.Rmd
+0bb28fb26f58eb5fdddd49949bde923c *inst/doc/UserGuide.html
+ee0ca5727ff3a5d6a3a2a1b2337c25d4 *man/make_opt.Rd
+16734fcb8a3fd12c2337f6801958f671 *man/match_with.Rd
+c1529dbe97efacc026355993e93b8d7d *man/none.Rd
+6e951723062b746312b7cc5f884f6e13 *man/opt_unwrap.Rd
+61b0de7350fabdd89908c4f0aa4c9c6c *man/optional.Rd
+5ecf45fbf7b58ea1e5e101a9a2f2a740 *man/some.Rd
+ef04cb49e1fe4225ce39c5bdc14ce521 *vignettes/UserGuide.Rmd
