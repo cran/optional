@@ -4,7 +4,7 @@
 
 <head>
 
-<meta charset="utf-8">
+<meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 
@@ -12,7 +12,7 @@
 
 <meta name="author" content="Antoine Champion" />
 
-<meta name="date" content="2017-07-31" />
+<meta name="date" content="2018-05-06" />
 
 <title>User Guide</title>
 
@@ -70,7 +70,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <h1 class="title toc-ignore">User Guide</h1>
 <h4 class="author"><em>Antoine Champion</em></h4>
-<h4 class="date"><em>2017-07-31</em></h4>
+<h4 class="date"><em>2018-05-06</em></h4>
 
 
 
@@ -124,26 +124,26 @@ pattern , result-function,
 
 a &lt;-<span class="st"> </span><span class="dv">5</span>
 <span class="kw">match_with</span>(a,
-  . <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">some</span>(.),          print,
-  none,                   <span class="cf">function</span>() <span class="kw">print</span>(<span class="st">&quot;Error!&quot;</span>)
+  . <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">some</span>(.),          paste,
+  none,                   <span class="cf">function</span>() <span class="st">&quot;Error!&quot;</span>
 )</code></pre></div>
-<pre><code>## [1] 5</code></pre>
+<pre><code>## [1] &quot;5&quot;</code></pre>
 <ol style="list-style-type: decimal">
-<li><p>Each <code>pattern</code> can be either:</p>
+<li>Each <code>pattern</code> can be either:
 <ul>
-<li>an object or a primitive type (direct comparison with <code>variable</code>)</li>
-<li>a list (match if <code>variable</code> is in the list)</li>
+<li>an object or a primitive type (direct comparison with <code>variable</code>),</li>
+<li>a list (match if <code>variable</code> is in the list),</li>
 <li>a <code>magrittr</code> functional sequence that matches if it returns <code>variable</code>. The dot <code>.</code> denotes the variable to be matched.</li>
 </ul></li>
-<li><p>If <code>result-function</code> takes no arguments, it will be called as is. Else, the only argument that will be sent is <code>variable</code>.</p></li>
+<li>If <code>result-function</code> takes no arguments, it will be called as is. Else, the only argument that will be sent is <code>variable</code>. You can also use the fallthrough function <code>fallthrough()</code> to permit the matching to continue even if the current pattern is matched.</li>
 </ol>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a &lt;-<span class="st"> </span><span class="dv">5</span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a &lt;-<span class="st"> </span><span class="dv">4</span>
 <span class="kw">match_with</span>(a,
-  <span class="dv">1</span>,                      <span class="cf">function</span>() <span class="kw">print</span>(<span class="st">&quot;Matched exact value&quot;</span>),
-  <span class="kw">list</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>),          <span class="cf">function</span>(x) <span class="kw">paste</span>(<span class="st">&quot;Matched in list:&quot;</span>, x),
-  . <span class="op">%&gt;%</span><span class="st"> </span><span class="cf">if</span> (. <span class="op">&gt;</span><span class="st"> </span><span class="dv">4</span>).,      <span class="cf">function</span>(x) <span class="kw">paste</span>(<span class="st">&quot;Matched in condition:&quot;</span>, x)
+  <span class="dv">1</span>,                 <span class="cf">function</span>() <span class="st">&quot;Matched exact value&quot;</span>,
+  <span class="kw">list</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>),     <span class="kw">fallthrough</span>(<span class="cf">function</span>() <span class="st">&quot;Matched in list&quot;</span>),
+  . <span class="op">%&gt;%</span><span class="st"> </span><span class="cf">if</span> (. <span class="op">&gt;</span><span class="st"> </span><span class="dv">3</span>)., <span class="cf">function</span>(x) <span class="kw">paste0</span>(<span class="st">&quot;Matched in condition: &quot;</span>,x,<span class="st">&quot;&gt;3&quot;</span>)
 )</code></pre></div>
-<pre><code>## [1] &quot;Matched in condition: 5&quot;</code></pre>
+<pre><code>## [1] &quot;Matched in list&quot;           &quot;Matched in condition: 4&gt;3&quot;</code></pre>
 </div>
 
 
@@ -153,7 +153,7 @@ a &lt;-<span class="st"> </span><span class="dv">5</span>
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
 </script>
