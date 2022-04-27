@@ -1,12 +1,12 @@
-001785e73e438f30afbdb7e7b8ea44ee *DESCRIPTION
+ef869ee343b3397786963a1eab614112 *DESCRIPTION
 464778ebe587f79385742220d48eedb0 *NAMESPACE
-cd824f694d6ec837b66a6956ddf7bef1 *NEWS.md
-1818ca44c83ed79b150c72f394eb649f *R/optional.R
-f55f8c186fc2337bf273222a34f36724 *README.md
-0ba73a230e09a66f08177c7f3750168c *build/vignette.rds
-8826ee1701d9247c886c88029ce2371b *inst/doc/UserGuide.R
-cbb66bea3a4c34437ad1decb8f3259c2 *inst/doc/UserGuide.Rmd
-12ad1b981fdbb59970c9f487a391a379 *inst/doc/UserGuide.html
+5069163af567344734b087be3f26ac76 *NEWS.md
+be13ea67e3887c034cbb4aa8d8c86f0f *R/optional.R
+df9f8b8dec2607432feb17f040271837 *README.md
+239394e851339eeef47b7480f805382d *build/vignette.rds
+05b2118471cb8846e9d9d690551bac38 *inst/doc/UserGuide.R
+ebf3bcb9ed03140f38e560dc76e1c68b *inst/doc/UserGuide.Rmd
+e6526448dfe42b410dd2138067541bbd *inst/doc/UserGuide.html
 d0b6a68d06574d1d17ffbed3826c8ec5 *man/fallthrough.Rd
 490ca9aecb1aa43e3336bfeb84224785 *man/make_opt.Rd
 c043a80158455a380c6c7189bb56bbf0 *man/match_with.Rd
@@ -14,4 +14,4 @@ c043a80158455a380c6c7189bb56bbf0 *man/match_with.Rd
 4ecb488e7d0fcc877bb48f8470490780 *man/opt_unwrap.Rd
 538d8f488fcd22b889aabf894238a163 *man/option.Rd
 ffa017f1b8af7a42e4e5ef1803f1446d *man/some.Rd
-cbb66bea3a4c34437ad1decb8f3259c2 *vignettes/UserGuide.Rmd
+ebf3bcb9ed03140f38e560dc76e1c68b *vignettes/UserGuide.Rmd
